@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
@@ -17,5 +17,5 @@ RUN apt-get update && apt-get install -y \
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Keep container running
-CMD ["bash"]
+# Keep container running with a process that won't terminate
+CMD ["tail", "-f", "/dev/null"]

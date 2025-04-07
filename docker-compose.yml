@@ -8,3 +8,4 @@ services:
       - ./scripts:/app/scripts
     stdin_open: true
     tty: true
+    command: tail -f /dev/null
