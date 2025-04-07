@@ -3,9 +3,6 @@ version: '3'
 services:
   python-env:
     build: .
-    container_name: python-test-vm
-    volumes:
-      - ./scripts:/app/scripts
     stdin_open: true
     tty: true
-    command: tail -f /dev/null
+    
